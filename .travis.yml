@@ -25,7 +25,7 @@ before_script:
 script:
   - ng build --prod
   - export CHROME_BIN=chromium-browser
-  - xvfb-run -a npm run test -- --single-run --no-progress
+  - xvfb-run -a npm run test --single-run --no-progress
 
 
 notifications:
