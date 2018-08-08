@@ -25,7 +25,7 @@ before_script:
 script:
   - ng build --prod
   - export CHROME_BIN=chromium-browser
-  - npm test --watch=false --no-progress 
+  - ng test --watch=false --no-progress 
 
 notifications:
   email:
