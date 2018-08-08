@@ -2,13 +2,26 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarComponent } from './sidebar.component';
 
+import { Router,NavigationEnd } from '@angular/router'
+
+import { Observable, of } from 'rxjs';
+
+class MockServices {
+  // Router
+  public events = of( new NavigationEnd(0, 'http://localhost:4200/login', 'http://localhost:4200/login'));
+}
+
 describe('SidebarComponent', () => {
+
   let component: SidebarComponent;
   let fixture: ComponentFixture<SidebarComponent>;
 
+  
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ]
+      declarations: [ SidebarComponent ],
+      providers: [{provide: Router, useClass: MockServices }]
     })
     .compileComponents();
   }));

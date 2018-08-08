@@ -10,10 +10,12 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 import { DataService } from './data.service'; 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
