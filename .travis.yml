@@ -23,7 +23,7 @@ before_script:
   - npm install -g @angular/cli
 
 script:
-  - ng build --prod --aot=false
+  - ng build --prod
   - export CHROME_BIN=chromium-browser
   - xvfb-run -a npm run test --single-run --no-progress
 
